@@ -31,7 +31,6 @@ class CardDeliveryTest {
 
 
     @Test
-    @DisplayName("Should successful plan meeting")
     void shouldSuccessfulPlanMeeting() {
         DataGenerator.UserInfo validUser = DataGenerator.Registration.generateUser("ru");
         int daysToAddForFirstMeeting = 4;
@@ -60,5 +59,4 @@ class CardDeliveryTest {
                 .shouldHave(text("Встреча успешно запланирована на " + secondMeetingDate))
                 .shouldBe(visible);
     }
-
 }
